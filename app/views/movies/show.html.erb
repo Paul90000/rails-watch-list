@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="d-flex flex-column align-items-center p-2">
+    <div class="card mb-3">
+      <img class="card-img-top" src="<%= @movie.poster_url %>" alt="Movie">
+      <div class="card-body">
+        <h5 class="card-title"><%= @movie.title %></h5>
+        <p class="card-text"><strong>Overview:</strong> <%= @movie.overview %></p>
+        <p class="card-text"><small class="text-muted"><strong>Rating:</strong> <%= @movie.rating %></small></p>
+      </div>
+    </div>
+    <%= link_to 'Back to Movies', movies_path, class: "link-button" %>
+  </div>
+</div>

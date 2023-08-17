@@ -1,0 +1,26 @@
+<div class="container d-flex flex-column align-items-center">
+
+  <div class="d-flex align-items-center">
+    <h1 class="p-3">Movies</h1>
+    <%= link_to 'Create List', new_list_path, class: "link-button" %>
+  </div>
+  <div class="movie-cards-grid row">
+
+      <% @movies.each do |movie| %>
+        <div class="card p-1 m-2 col-6 col-md-4" style="width: 18rem;">
+          <img class="card-img-top" src="<%= movie.poster_url %>" alt="movie">
+          <div class="card-body">
+            <h5 class="card-title"><%= movie.title %></h5>
+            <p class="card-text"><%= movie.overview %></p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Ratings: <%= movie.rating %></li>
+          </ul>
+          <div class="card-body">
+            <%= link_to 'Show', movie_path(movie), class: "link-edit" %>
+          </div>
+        </div>
+      <% end %>
+
+  </div>
+</div>
