@@ -1,0 +1,25 @@
+.bookmark-card {
+    background-color: #fffffe;
+    border-radius: 16px;
+    padding: 8em;
+    margin: 16px 0;
+}
+
+.ul-card-bookmarks {
+  background-color: #658AD3;
+  border-radius: 4px;
+  padding: 2em;
+  color: white;
+}
+
+.bookmarks-create {
+  color: white;
+}
+
+#create-bookmark-btn {
+  color: white;
+  background-color: #3868C7;
+  &:hover {
+    background-color: #658AD3;
+  }
+}

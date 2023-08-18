@@ -1,16 +1,19 @@
 <div class="container">
-  <div class="d-flex flex-column align-items-center ">
+  <div class="d-flex flex-column">
 
-    <h1>Lists</h1>
-    <%= link_to 'New List', new_list_path, class: "link-button" %>
-    <ul>
+    <div class="d-flex align-items-center justify-content-md-between">
+      <h1>Lists</h1>
+      <%= link_to 'New List', new_list_path, class: "link-button" %>
+    </div>
+    <ul class="ul-card-list">
       <% @lists.each do |list| %>
         <li>
           <%= link_to list.name, list, class: "link-edit" %>
         </li>
       <% end %>
     </ul>
-    <%= link_to 'Back to Movies', movies_path, class: "link-button" %>
-
+    <div class="d-flex align-items-center">
+      <%= link_to 'Back to Movies', movies_path, class: "link-button" %>
+    </div>
   </div>
 </div>

@@ -1,18 +1,42 @@
-.link-edit {
-  text-decoration: none;
-  font-size: 16px;
-  color: #171A21;
-}
-
 .link-button {
   text-decoration: none;
   font-size: 16px;
-  color: white;
-  background-color: #171A21;
+  color: #fffffe;
+  background-color: #3868C7;
   border-radius: 4px;
   padding: 8px;
+  margin: 8px 0px;
 
   &:hover {
-    background-color: #444D5F;
+    color: #fffffe;
+    background-color: #658ad3;
   }
 }
+// ^ btn done
+
+.link-edit {
+  text-decoration: none;
+  font-size: 24px;
+  color: #3868C7;
+  margin: 8px;
+
+  &:hover {
+    color: #658ad3;
+  }
+}
+// ^ link done
+
+.link-edit-delete {
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  margin: 8px;
+  opacity: 0.5;
+
+  &:hover {
+    color: red;
+    border-radius: 4px;
+    opacity: 1;
+  }
+}
+// ^ btn delete done

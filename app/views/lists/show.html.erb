@@ -2,22 +2,30 @@
 <div class="container">
   <div class="d-flex flex-column align-items-center">
 
+    <h1><%= @list.name %></h1>
+    <%= link_to 'Add Bookmark', new_list_bookmark_path(@list), class: "link-button" %>
 
-      <h1><%= @list.name %></h1>
-      <%= link_to 'Add Bookmark', new_list_bookmark_path(@list), class: "link-button" %>
-    <div class="d-flex flex-column align-items-center">
-      <h2>Bookmarks:</h2>
-      <ul>
-        <% @list.bookmarks.each do |bookmark| %>
-          <li class="p-1">
-            <%= bookmark.movie.title %>
-          </li>
-            <%= bookmark.comment %>
-          </li>
-        <% end %>
-      </ul>
-      <%= link_to 'Back', lists_path, class: "link-edit" %>
+    <div class="d-flex align-items-center bookmark-card">
+
+        <div>
+          <h2 class="border-bottom mb-3">Bookmarks</h2>
+          <ul class="ul-card-bookmarks">
+            <% @list.bookmarks.each do |bookmark| %>
+
+              <div class="d-flex align-items-center justify-content-between">
+                <li class="">
+                  <%= bookmark.movie.title %>
+                </li>
+              </div>
+
+              <div class="d-flex align-items-center justify-content-between">
+                  <%= bookmark.comment %>
+                  <%= link_to 'Delete', bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this bookmark?" }, class: "link-edit-delete" %>
+              </div>
+            <% end %>
+          </ul>
+        </div>
     </div>
-
+    <%= link_to 'Back', lists_path, class: "link-edit" %>
   </div>
 </div>
