@@ -1,13 +1,13 @@
-<div class="container d-flex flex-column align-items-center">
+<div class="container d-flex flex-column ">
 
   <div class="d-flex align-items-center">
     <h1 class="p-3">Movies</h1>
     <%= link_to 'View All Lists', lists_path, class: "link-button" %>
   </div>
-  <div class="movie-cards-grid row">
 
+  <div class="movie-cards-grid row">
       <% @movies.each do |movie| %>
-        <div class="card p-1 m-2 col-6 col-md-4 align-items-center" style="width: 18rem;">
+        <div class="card card-hover-blue p-1 m-2 col-6 col-md-4 align-items-center" style="width: 18rem;">
           <img class="card-img-top" src="<%= movie.poster_url %>" alt="movie">
           <div class="card-body">
             <h5 class="card-title"><%= movie.title %></h5>
@@ -21,6 +21,6 @@
           </div>
         </div>
       <% end %>
-
   </div>
+
 </div>

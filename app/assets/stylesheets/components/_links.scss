@@ -6,10 +6,12 @@
   border-radius: 4px;
   padding: 8px;
   margin: 8px 0px;
+  font-family: $body-font;
 
   &:hover {
     color: #fffffe;
     background-color: #658ad3;
+    transition: 0.6s ease;
   }
 }
 // ^ btn done
@@ -19,9 +21,11 @@
   font-size: 24px;
   color: #3868C7;
   margin: 8px;
+  font-family: $body-font;
 
   &:hover {
     color: #658ad3;
+    transition: 0.6s ease;
   }
 }
 // ^ link done
@@ -32,11 +36,13 @@
   color: black;
   margin: 8px;
   opacity: 0.5;
+  font-family: $body-font;
 
   &:hover {
     color: red;
     border-radius: 4px;
     opacity: 1;
+    transition: 1s ease;
   }
 }
 // ^ btn delete done
