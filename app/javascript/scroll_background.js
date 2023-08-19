@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const body = document.body;
 
   function updateBackground() {
+    console.log("Background update triggered");
     const scrollPercent = (window.scrollY / (body.scrollHeight - window.innerHeight)) * 100;
 
     let hue = 240 - scrollPercent;

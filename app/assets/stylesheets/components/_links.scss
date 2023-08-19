@@ -26,6 +26,35 @@
   &:hover {
     color: #FF5A1F;
     transition: 0.6s ease;
+    text-decoration: underline;
   }
+}
+
+// Show hidden on movies display page
+#movie-card {
+  position: relative;
+}
+
+#explore-movies-display {
+  display: none;
+  position: absolute;
+  top: 370px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 16px;
+}
+
+#movie-card:hover #explore-movies-display {
+  display: block;
+  transition: 0.6 ease-in;
+}
+// Ratings on movies page
+#ratings-movies-display {
+  position: absolute;
+  bottom: 10px;
+  right: 95px;
 }
 // ^ link done

@@ -7,17 +7,17 @@
 
   <div class="movie-cards-grid row gap-5">
       <% @movies.each do |movie| %>
-        <div class="card card-hover-black p-1 col-md-5 align-items-center" style="width: 18rem;">
+        <div class="card card-hover-black p-1 col-md-5 align-items-center" id="movie-card" style="width: 18rem;">
           <img class="card-img-top" src="<%= movie.poster_url %>" alt="movie">
           <div class="card-body">
             <h5 class="card-title"><%= movie.title %></h5>
             <p class="card-text"><%= movie.overview %></p>
           </div>
-          <ul class="list-group list-group-flush">
+          <ul class="list-group list-group-flush" id="ratings-movies-display">
             <li class="list-group-item">Ratings: <%= movie.rating %></li>
           </ul>
-          <div class="card-body">
-            <%= link_to 'Show', movie_path(movie), class: "link-edit" %>
+          <div class="card-body show-text-movie">
+            <%= link_to 'Explore', movie_path(movie), class: "link-edit", id: "explore-movies-display"%>
           </div>
         </div>
       <% end %>
