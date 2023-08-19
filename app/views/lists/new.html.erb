@@ -1,13 +1,14 @@
 <div class="container">
   <div class="d-flex flex-column align-items-center p-5 list-form-create card-hover-blue">
 
-    <h1>New List</h1>
-      <%= simple_form_for @list do |f| %>
-        <div class="d-flex flex-column">
-          <%= f.input :name, label: 'Name' %>
-          <%= f.button :submit, class: "create-list-btn"%>
-        </div>
-      <% end %>
-      <%= link_to 'Back', lists_path, class: "link-button" %>
+    <h1 id="new-list-create-page">New List</h1>
+    <%= simple_form_for @list do |f| %>
+      <div class="d-flex flex-column">
+        <%= f.input :name, label: 'Name' %>
+        <%= f.button :submit, class: "link-button"%>
+      </div>
+    <% end %>
+    <%= link_to 'Back', lists_path, class: "link-edit" %>
+
   </div>
 </div>

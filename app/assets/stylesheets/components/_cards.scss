@@ -1,8 +1,8 @@
-.card-hover-blue {
+.card-hover-black {
   border: 1px solid transparent;
 
 &:hover {
-  border: 1px solid #3868C7;
+  border: 1px solid black;
   transition: 0.6s ease;
 }
 }
@@ -25,15 +25,6 @@
   color: white;
 }
 
-#create-bookmark-btn {
-  color: white;
-  background-color: #3868C7;
-  &:hover {
-    background-color: #658AD3;
-    transition: 0.6s ease;
-  }
-}
-
 .list-form-create {
   color: black;
   background-color: white;
@@ -54,4 +45,8 @@
     background-color: #658AD3;
     transition: 0.6s ease;
   }
+}
+
+.bookmarks-show-card {
+  border-radius: 16px;
 }

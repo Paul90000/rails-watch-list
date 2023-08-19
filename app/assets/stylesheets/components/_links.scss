@@ -2,7 +2,7 @@
   text-decoration: none;
   font-size: 16px;
   color: #fffffe;
-  background-color: #3868C7;
+  background-color: #FF4500;
   border-radius: 4px;
   padding: 8px;
   margin: 8px 0px;
@@ -10,7 +10,7 @@
 
   &:hover {
     color: #fffffe;
-    background-color: #658ad3;
+    background-color: #FF5A1F;
     transition: 0.6s ease;
   }
 }
@@ -19,30 +19,13 @@
 .link-edit {
   text-decoration: none;
   font-size: 24px;
-  color: #3868C7;
-  margin: 8px;
-  font-family: $body-font;
+  color: #FF4500;
+  margin: 0px;
+  font-family: 'Poppins', sans-serif;
 
   &:hover {
-    color: #658ad3;
+    color: #FF5A1F;
     transition: 0.6s ease;
   }
 }
 // ^ link done
-
-.link-edit-delete {
-  text-decoration: none;
-  font-size: 16px;
-  color: black;
-  margin: 8px;
-  opacity: 0.5;
-  font-family: $body-font;
-
-  &:hover {
-    color: red;
-    border-radius: 4px;
-    opacity: 1;
-    transition: 1s ease;
-  }
-}
-// ^ btn delete done

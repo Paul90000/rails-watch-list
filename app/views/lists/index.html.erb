@@ -1,20 +1,25 @@
 <div class="container">
   <div class="d-flex justify-content-center mt-5">
-
-    <div class="d-flex flex-column align-items-center justify-content-md-between">
-      <h1>Lists</h1>
-      <ul class="ul-card-list card-hover-blue">
-        <% @lists.each do |list| %>
-          <li>
-            <%= link_to list.name, list, class: "link-edit" %>
-          </li>
-        <% end %>
-      </ul>
-    <div>
-    <div class="d-flex align-items-center">
       <%= link_to 'Back to Movies', movies_path, class: "link-button me-3" %>
       <%= link_to 'New List', new_list_path, class: "link-button" %>
-    </div>
+  </div>
 
+  <%# Grid start %>
+  <div class="row">
+    <%# Iteration start %>
+    <% @lists_with_movies.each do |list_with_movie| %>
+      <div class="card col-2 p-3 m-3 list-card card-hover-black" style="width: 18rem;">
+        <% if list_with_movie.movie_id %>
+          <img src="<%= list_with_movie.poster_url %>" class="card-img-top" alt="...">
+        <% else %>
+          <img src="" alt="">
+        <% end %>
+
+        <div class="card-body">
+          <h2 class="card-title"><%= link_to list_with_movie.list_name, list_path(list_with_movie.list_id), class: "link-edit" %></h2>
+          <p class="card-text">Some quick example</p>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
