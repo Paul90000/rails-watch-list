@@ -1,11 +1,11 @@
 <div class="container d-flex flex-column ">
 
-  <div class="d-flex align-items-center">
+
+  <div class="movie-cards-grid row gap-5">
+  <div class="d-flex flex-sm-column align-items-start">
     <h1 class="mt-3 mb-3 pe-3">Movies</h1>
     <%= link_to 'View All Lists', lists_path, class: "link-button" %>
   </div>
-
-  <div class="movie-cards-grid row gap-5">
       <% @movies.each do |movie| %>
         <div class="card card-hover-black p-1 col-md-5 align-items-center" id="movie-card" style="width: 18rem;">
           <img class="card-img-top" src="<%= movie.poster_url %>" alt="movie">

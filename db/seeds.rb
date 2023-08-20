@@ -16,7 +16,7 @@ url = "http://tmdb.lewagon.com/movie/top_rated"
 movies_data = URI.open(url).read
 movies = JSON.parse(movies_data)["results"]
 
-# You can now iterate through the movies and seed them:
+# iterate through the movies and seed them:
 movies.each do |movie|
   Movie.create(
     title: movie["title"],
